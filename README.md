@@ -26,7 +26,8 @@ var gulpCheckGrep = require('gulp-check-grep');
 
 gulp.task('check', function () {
   return gulp.src('**/*')
-    .pipe(gulpCheckGrep(/pattern/g))
+    .pipe(gulpCheckGrep(/console\.log/g), {message: 'console.log not allowed'})
+    .pipe(gulpCheckGrep(/print\(/g), {message: 'print call found'})
     .pipe(gulpCheckGrep.failOnError());
 });
 ```
