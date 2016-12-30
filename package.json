@@ -26,16 +26,16 @@
   },
   "homepage": "https://github.com/sophilabs/gulp-check-grep#readme",
   "dependencies": {
-    "gilp-util": "^0.0.6",
-    "gulp-util": "^3.0.7",
-    "through2": "^2.0.1"
+    "gilp-util": "^0.0.7",
+    "gulp-util": "^3.0.8",
+    "through2": "^2.0.3"
   },
   "devDependencies": {
-    "coveralls": "^2.11.9",
-    "istanbul": "^0.4.4",
-    "mocha": "^2.5.3",
-    "semistandard": "^8.0.0",
-    "should": "^9.0.2",
-    "vinyl": "^1.1.1"
+    "coveralls": "^2.11.15",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "semistandard": "^9.2.1",
+    "should": "^11.1.2",
+    "vinyl": "^2.0.1"
   }
 }
