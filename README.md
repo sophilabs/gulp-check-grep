@@ -11,6 +11,11 @@
 
 Gulp plugin to detect a pattern through files and fail when found.
 
+An array with patterns can be specified as well.
+
+You can pass a function to invalidate the match.
+
+
 ## Installation
 
 ```bash
@@ -27,7 +32,9 @@ var gulpCheckGrep = require('gulp-check-grep');
 gulp.task('check', function () {
   return gulp.src('**/*')
     .pipe(gulpCheckGrep(/console\.log/g, {message: 'console.log not allowed'}))
-    .pipe(gulpCheckGrep(/print\(/g, {message: 'print call found'}))
+    .pipe(gulpCheckGrep(/print\(/g, {
+      message: 'print call found',
+      invalidate: (line, number, fileObject) => line.endsWith('# noqa')}))
     .pipe(gulpCheckGrep.failOnError());
 });
 ```
