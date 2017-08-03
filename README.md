@@ -34,7 +34,7 @@ gulp.task('check', function () {
     .pipe(gulpCheckGrep(/console\.log/g, {message: 'console.log not allowed'}))
     .pipe(gulpCheckGrep(/print\(/g, {
       message: 'print call found',
-      invalidate: (line, number, fileObject) => line.endsWith('# noqa')}))
+      pass: (line, number, fileObject) => line.endsWith('# noqa')}))
     .pipe(gulpCheckGrep.failOnError());
 });
 ```
