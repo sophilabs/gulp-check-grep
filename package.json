@@ -1,6 +1,6 @@
 {
   "name": "gulp-check-grep",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gulp plugin to check for a pattern through files and fail when found",
   "main": "lib/index.js",
   "directories": {
